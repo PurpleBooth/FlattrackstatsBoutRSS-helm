@@ -15,7 +15,13 @@ service:
   type: NodePort
   externalPort: 80
   internalPort: 8081
-resources: {}
+resources:
+  limits:
+    memory: "100Mi"
+    cpu: "2"
+  requests:
+    memory: "55Mi"
+    cpu: "1"
 newRelic:
   appName: 'rollerderbyrss.purplebooth.co.uk'
   licenseKey: 'license key here'
